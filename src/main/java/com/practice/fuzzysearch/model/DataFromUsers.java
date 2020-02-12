@@ -1,6 +1,6 @@
 package com.practice.fuzzysearch.model;
 
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,7 +13,10 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 public class DataFromUsers extends Data {
 
+    @Builder
+    public DataFromUsers(Long id, String city, String address) {
+        super(id, city, address);
+    }
 }
